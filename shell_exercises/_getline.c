@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int _getline(char **lineptr, size_t *len, FILE *stream);
+int __getline(char **lineptr, size_t *len, FILE *stream);
 
 
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
@@ -20,10 +20,10 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	return (0);
 }
 
-int _getline(char **lineptr, size_t *len, FILE *stream)
+int __getline(char **lineptr, size_t *len, FILE *stream)
 {
 	int i = 0;
-	int nread = 0;
+	int nread = -1;
 	(void)len;
 	char ch;
 	int n = 0;
@@ -32,7 +32,7 @@ int _getline(char **lineptr, size_t *len, FILE *stream)
 	if (hello == NULL)
 		return (-1);
 
-	while ((ch = getc(stream)) != '\n' && ch != EOF)
+	while ((ch = getc(stream)) != '\n')
 	{
 		nread++;
 		if (nread == n)
@@ -41,11 +41,11 @@ int _getline(char **lineptr, size_t *len, FILE *stream)
 			n = n * 2;
 		}
 		hello[i] = ch;
-		//printf("%c\n", hello[i]);
 		i++;
-
 	}	
 	hello[i] = '\0';
 	*lineptr = hello;
+	if (nread != -1)
+		nread++;
 	return (nread);
 }
