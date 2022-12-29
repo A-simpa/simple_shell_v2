@@ -65,7 +65,7 @@ char **split_words(char *str, char del)
 }
 
 
-int main(void)
+/*int main(void)
 {
 	char str[] = "/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin";
 	char **arr = NULL;
@@ -81,7 +81,7 @@ int main(void)
 	return (EXIT_SUCCESS);
 }
 
-
+*/
 
 
 
