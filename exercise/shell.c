@@ -19,6 +19,7 @@ int main(void)
 	pid_t pid1, pid2;
 	ssize_t nread;
 	size_t n;
+
 	pid1 = fork();
 	if (pid1 != 0)
 	{

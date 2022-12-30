@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  *main - Entry point
@@ -8,8 +7,6 @@
  * Return: Always(0)
  */
 
-int _getline(char **line_ptr, size_t *n, FILE *stream);
-int get_count(FILE *stream);
 
 int _getline(char **line_ptr, size_t *n, FILE *stream)
 {
@@ -51,6 +48,7 @@ int get_count(FILE *stream)
 	return (count);
 }
 
+/**
 int main(int ac __attribute__((unused)), char **av)
 {
 	char *line_ptr = NULL;
@@ -62,3 +60,4 @@ int main(int ac __attribute__((unused)), char **av)
 	n_read = _getline(&line_ptr, &n, fp);
 	return (0);
 }
+*/

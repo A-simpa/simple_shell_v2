@@ -38,7 +38,6 @@ int main(int ac __attribute__((unused)), char **av)
 			printf("FOUND\n");
 			free(c_path);
 			return (0);
-	
 		}
 		free(c_path);
 		i++;
