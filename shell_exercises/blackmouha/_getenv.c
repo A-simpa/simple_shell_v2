@@ -7,7 +7,10 @@
  *
  *
  */
+<<<<<<< HEAD:exercise/_getenv.c
 
+=======
+>>>>>>> 0e4c6930f32bf9c89d43eb9b09c62cd476be2672:shell_exercises/blackmouha/_getenv.c
 extern char **environ;
 
 char *_getenv(const char *name);
